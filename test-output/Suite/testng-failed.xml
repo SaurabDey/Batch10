@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="givenBrowser" value="ie"/>
+  <test name="Test1">
+    <parameter name="givenBrowser" value="Chrome"/>
+    <classes>
+      <class name="com.selenium.Batch10Maven.TestNgClass"/>
+    </classes>
+  </test> <!-- Test1 -->
+  <test name="Test3">
+    <parameter name="givenBrowser" value="Firefox"/>
+    <classes>
+      <class name="com.selenium.Batch10Maven.TestNgClass"/>
+    </classes>
+  </test> <!-- Test3 -->
+  <test name="Test2">
+    <parameter name="givenBrowser" value="ie"/>
+    <classes>
+      <class name="com.selenium.Batch10Maven.TestNgClass"/>
+    </classes>
+  </test> <!-- Test2 -->
+  <test name="Test3(failed)" parallel="tests">
+    <parameter name="givenBrowser" value="Firefox"/>
+    <classes>
+      <class name="com.selenium.Batch10Maven.TestNgClass">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="f"/>
+        </methods>
+      </class> <!-- com.selenium.Batch10Maven.TestNgClass -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->
